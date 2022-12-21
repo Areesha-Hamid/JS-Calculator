@@ -1,0 +1,68 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap'); 
+ *,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ body{
+    width: 100%;
+    height: 100vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+ }
+
+ .cal-grid{
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 100px);
+ }
+
+.cal-grid > button{
+    background-color: rgba(255,255,255,0.5);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.cal-grid > button:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+.span-two{
+    grid-column: span 2;
+}
+
+.input{
+    background-color: rgba(0, 0,0,0.7);
+    border: 2px solid #fff;
+    outline: none;
+    padding: 3rem 20px;
+    display: block;
+    width: 400px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.output{
+    grid-column: span 4;
+}
+
+@media only screen and (max-width : 430px){
+   .cal-grid{
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(90px, auto) repeat(6, 70px);
+   }
+   .cal-grid > button{
+    font-size: 1rem;
+   }
+   .input{
+    width: 280px;
+   }
+}
